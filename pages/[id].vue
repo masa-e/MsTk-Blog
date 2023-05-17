@@ -29,6 +29,10 @@
 <script setup lang="ts">
 import { Blog } from '~~/types/blog'
 
+definePageMeta({
+  layout: 'with-sidebar',
+})
+
 const { params } = useRoute()
 
 const { data } = await useMicroCMSGetListDetail<Blog>({

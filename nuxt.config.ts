@@ -13,4 +13,12 @@ export default defineNuxtConfig({
       plugins: [tailwindTypography],
     },
   },
+
+  runtimeConfig: {
+    public: {
+      compression: true,
+      SITE_TITLE: 'MsTk Blog',
+      TEAM_NAME: 'Mstk',
+    },
+  },
 })

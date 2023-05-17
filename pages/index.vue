@@ -1,8 +1,5 @@
 <template>
-  <h1 class="text-center font-sans text-4xl font-semibold">
-    Nuxt3 Jamstack Blogs
-  </h1>
-  <ul class="mt-16 grid grid-cols-1 gap-8">
+  <ul class="grid grid-cols-1 gap-8">
     <li v-for="blog in data?.contents" :key="blog.id">
       <NuxtLink
         :to="`/${blog.id}`"
@@ -35,6 +32,10 @@
 
 <script setup lang="ts">
 import { Blog } from '~~/types/blog'
+
+definePageMeta({
+  layout: 'with-sidebar',
+})
 
 const { data } = await useMicroCMSGetList<Blog>({
   endpoint: 'blogs',
