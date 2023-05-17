@@ -34,9 +34,9 @@
 </template>
 
 <script setup lang="ts">
-import { Blog } from "~~/types/blog";
+import { Blog } from '~~/types/blog'
 
 const { data } = await useMicroCMSGetList<Blog>({
-  endpoint: "blogs",
-});
+  endpoint: 'blogs',
+})
 </script>

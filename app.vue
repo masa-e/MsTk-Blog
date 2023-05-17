@@ -4,6 +4,6 @@
       <div class="mx-auto max-w-3xl py-10 md:py-16">
         <NuxtPage />
       </div>
-     </div>
+    </div>
   </NuxtLayout>
 </template>

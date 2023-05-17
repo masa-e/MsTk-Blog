@@ -27,12 +27,12 @@
 </template>
 
 <script setup lang="ts">
-import { Blog } from "~~/types/blog";
+import { Blog } from '~~/types/blog'
 
-const { params } = useRoute();
+const { params } = useRoute()
 
 const { data } = await useMicroCMSGetListDetail<Blog>({
-  endpoint: "blogs",
+  endpoint: 'blogs',
   contentId: Array.isArray(params.id) ? params.id[0] : params.id,
-});
+})
 </script>
