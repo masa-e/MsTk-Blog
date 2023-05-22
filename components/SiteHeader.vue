@@ -8,12 +8,12 @@
 </template>
 
 <script>
-	import HeaderNav from "@/components/HeaderNav.vue";
-	export default {
-		components: {
-			HeaderNav
-		}
-	};
+import HeaderNav from '@/components/HeaderNav.vue'
+export default {
+  components: {
+    HeaderNav,
+  },
+}
 </script>
 
 <style scoped lang="scss">
