@@ -3,15 +3,15 @@
     <div class="siteheader__sitetitle font-light text-4xl">
       <a href="/">{{ $config.SITE_TITLE }}</a>
     </div>
-    <HeaderNav />
+    <Navigation />
   </header>
 </template>
 
 <script>
-import HeaderNav from '@/components/HeaderNav.vue'
+import Navigation from '~/components/layouts/Header/Navigation/index.vue'
 export default {
   components: {
-    HeaderNav,
+    Navigation,
   },
 }
 </script>

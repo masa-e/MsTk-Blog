@@ -186,6 +186,6 @@ export default {
   },
 }
 definePageMeta({
-  layout: 'with-sidebar',
+  layout: 'index',
 })
 </script>

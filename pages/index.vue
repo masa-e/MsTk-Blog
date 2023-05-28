@@ -2,7 +2,7 @@
   <ul class="grid grid-cols-1 gap-8">
     <li v-for="blog in data?.contents" :key="blog.id">
       <NuxtLink
-        :to="`/${blog.id}`"
+        :to="`/blog/${blog.id}`"
         class="flex flex-col gap-4 sm:transition-shadow sm:hover:shadow md:flex-row md:items-center lg:gap-6"
       >
         <img
@@ -34,7 +34,7 @@
 import { Blog } from '~~/types/blog'
 
 definePageMeta({
-  layout: 'with-sidebar',
+  layout: 'index',
 })
 
 const { data } = await useMicroCMSGetList<Blog>({

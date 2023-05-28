@@ -30,7 +30,7 @@
 import { Blog } from '~~/types/blog'
 
 definePageMeta({
-  layout: 'with-sidebar',
+  layout: 'index',
 })
 
 const { params } = useRoute()
