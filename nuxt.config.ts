@@ -13,7 +13,6 @@ export default defineNuxtConfig({
       plugins: [tailwindTypography],
     },
   },
-
   runtimeConfig: {
     public: {
       compression: true,
@@ -21,4 +20,5 @@ export default defineNuxtConfig({
       TEAM_NAME: 'Mstk',
     },
   },
+  css: ['@/assets/css/style.css'],
 })

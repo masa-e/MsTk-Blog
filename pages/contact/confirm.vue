@@ -1,36 +1,44 @@
 <template>
-  <div class="p-contact">
-    <h1>お問い合わせ</h1>
-    <form v-on:submit.prevent="submit">
-      <div class="c-form-group">
-        <div class="c-form-group__key">名前</div>
-        <div class="c-form-group__val">{{contact.name}}</div>
-      </div>
-      <div class="c-form-group">
-        <div class="c-form-group__key">性別</div>
-        <div class="c-form-group__val">{{contact.gender}}</div>
-      </div>
-      <div class="c-form-group">
-        <div class="c-form-group__key">メールアドレス</div>
-        <div class="c-form-group__val">{{contact.mail}}</div>
-      </div>
-      <div class="c-form-group">
-        <div class="c-form-group__key">お問い合わせ種別</div>
-        <div class="c-form-group__val">{{contact.type}}</div>
-      </div>
-      <div class="c-form-group">
-        <div class="c-form-group__key">お問い合わせ内容</div>
-        <div class="c-form-group__val">{{contact.body}}</div>
-      </div>
-      <div class="c-form-group">
-        <div class="c-form-group__key">サイトを訪問した経緯</div>
-        <div class="c-form-group__val">
-          <span v-for="item in contact.route">{{item}}</span>
+  <div class="container" id="app">
+    <main class="main">
+      <section class="block">
+        <h1 class="block-title">お問い合わせ</h1>
+        <div class="block-body">
+          <form v-on:submit.prevent="submit">
+            <fieldset>
+              <div class="form-group">
+                <label for="name">お名前</label>
+                <div>{{ contact.name }}</div>
+              </div>
+              <div class="form-group">
+                <label for="gender">性別</label>
+                <div>{{ contact.gender }}</div>
+              </div>
+              <div class="form-group">
+                <label for="mail">メールアドレス</label>
+                <div>{{ contact.mail }}</div>
+              </div>
+              <div class="form-group">
+                <label for="type">お問い合わせ種別</label>
+                <div>{{ contact.type }}</div>
+              </div>
+              <div class="form-group">
+                <label for="body">お問い合わせ内容</label>
+                <div>{{ contact.body }}</div>
+              </div>
+              <div class="form-group">
+                <label for="route">サイトを訪問した経緯</label>
+                <div>
+                  <span v-for="item in contact.route">{{ item }}</span>
+                </div>
+              </div>
+              <button type="submit" class="button">送信</button>
+              <NuxtLink to="/contact/">修正</NuxtLink>
+            </fieldset>
+          </form>
         </div>
-      </div>
-      <button type="submit" class="c-btn">送信</button>
-      <NuxtLink to="/contact/">修正</NuxtLink>
-    </form>
+      </section>
+    </main>
   </div>
 </template>
 
@@ -44,30 +52,30 @@ export default {
         mail: '',
         type: '',
         body: '',
-        route: []
-      }
+        route: [],
+      },
     }
   },
   created() {
-    const getContactData = this.$store.getters['getContact'];
-    if(!getContactData.flag) {
+    const getContactData = this.$store.getters['getContact']
+    if (!getContactData.flag) {
       this.$router.push('/contact/')
     }
-    this.contact.name = getContactData.name;
-    this.contact.gender = getContactData.gender;
-    this.contact.mail = getContactData.mail;
-    this.contact.type = getContactData.type;
-    this.contact.body = getContactData.body;
-    this.contact.route = getContactData.route;
+    this.contact.name = getContactData.name
+    this.contact.gender = getContactData.gender
+    this.contact.mail = getContactData.mail
+    this.contact.type = getContactData.type
+    this.contact.body = getContactData.body
+    this.contact.route = getContactData.route
   },
   methods: {
     submit() {
       // 送信後、storeに保存していたデータを破棄
-      this.$store.dispatch('removeAction');
+      this.$store.dispatch('removeAction')
       // 確認画面に遷移
-      this.$router.push('/contact/complete/');
-    }
-  }
+      this.$router.push('/contact/complete/')
+    },
+  },
 }
 definePageMeta({
   layout: 'with-sidebar',

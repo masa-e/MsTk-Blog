@@ -2,7 +2,7 @@
   <div>
     <form @submit.prevent="submit">
       <input type="text" v-model="query" ref="searchForm" />
-      <button class="search-btn" type="submit">検索</button>
+      <input class="button" type="submit" value="検索" />
     </form>
   </div>
 </template>

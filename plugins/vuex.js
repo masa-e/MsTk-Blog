@@ -1,4 +1,4 @@
-import { createStore } from "vuex";
+import { createStore } from 'vuex'
 const store = createStore({
   state() {
     return {
@@ -8,8 +8,8 @@ const store = createStore({
       type: '',
       body: '',
       route: [],
-      flag: false
-    };
+      flag: false,
+    }
   },
   mutations: {
     add(state, payload) {
@@ -19,16 +19,16 @@ const store = createStore({
       state.type = payload.type
       state.body = payload.body
       state.route = payload.route
-      state.flag = true;
+      state.flag = true
     },
     remove(state) {
-      state.name = '';
-      state.gender = null;
-      state.mail = '';
-      state.type = '';
-      state.body = '';
-      state.route = [];
-      state.flag = false;
+      state.name = ''
+      state.gender = null
+      state.mail = ''
+      state.type = ''
+      state.body = ''
+      state.route = []
+      state.flag = false
     },
   },
   getters: {
@@ -40,6 +40,7 @@ const store = createStore({
         type: state.type,
         body: state.body,
         route: state.route,
+        flag: state.flag,
       }
     },
   },
@@ -48,12 +49,12 @@ const store = createStore({
       commit('remove')
       commit('add', payload)
     },
-    removeAction({commit, dispatch, state}, payload) {
-      commit('remove');
-    }
+    removeAction({ commit, dispatch, state }, payload) {
+      commit('remove')
+    },
   },
-});
+})
 
 export default defineNuxtPlugin((nuxtApp) => {
-  nuxtApp.vueApp.use(store);
-});
+  nuxtApp.vueApp.use(store)
+})

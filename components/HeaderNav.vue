@@ -3,7 +3,7 @@
     <nav>
       <ul>
         <li>
-          <nuxt-link to="/link01">ホーム</nuxt-link>
+          <nuxt-link to="/">ホーム</nuxt-link>
         </li>
         <li>
           <nuxt-link to="/link02">このブログについて</nuxt-link>

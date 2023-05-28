@@ -5,7 +5,7 @@
         <SiteHeader />
       </div>
     </div>
-    <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10">
+    <div class="mx-auto max-w-7xl px-5 sm:px-8 lg:px-10 boxContainer">
       <div class="col-12 lg:col-9">
         <NuxtPage />
       </div>
