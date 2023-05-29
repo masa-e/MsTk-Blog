@@ -4,7 +4,7 @@
       <section class="block">
         <h1 class="block-title">お問い合わせ</h1>
         <div class="block-body">
-          <form v-on:submit.prevent="submit">
+          <form v-on:submit.prevent="validate">
             <fieldset>
               <div class="form-group">
                 <label for="name">お名前<span class="badge">必須</span></label>
@@ -14,6 +14,9 @@
                   id="name"
                   v-model="contact.name"
                 />
+                <div class="errors" v-if="errors">
+                  {{ errors.name }}
+                </div>
               </div>
               <div class="form-group">
                 <label for="gender">性別<span class="badge">必須</span></label>
@@ -37,6 +40,9 @@
                   />
                   女性
                 </label>
+                <div class="errors" v-if="errors">
+                  {{ errors.gender }}
+                </div>
               </div>
               <div class="form-group">
                 <label for="mail"
@@ -48,6 +54,9 @@
                   id="mail"
                   v-model="contact.mail"
                 />
+                <div class="errors" v-if="errors">
+                  {{ errors.mail }}
+                </div>
               </div>
               <div class="form-group">
                 <label for="type"
@@ -59,6 +68,9 @@
                   <option value="求人について">求人について</option>
                   <option value="その他">その他</option>
                 </select>
+                <div class="errors" v-if="errors">
+                  {{ errors.type }}
+                </div>
               </div>
               <div class="form-group">
                 <label for="body"
@@ -69,11 +81,12 @@
                   id="body"
                   v-model="contact.body"
                 ></textarea>
+                <div class="errors" v-if="errors">
+                  {{ errors.body }}
+                </div>
               </div>
               <div class="form-group">
-                <label for="body"
-                  >サイトを訪問した経緯<span class="badge">必須</span></label
-                >
+                <label for="body">サイトを訪問した経緯</label>
                 <label for="search">
                   <input
                     type="checkbox"
@@ -109,7 +122,6 @@
                 </label>
               </div>
               <p>
-                <!-- <input class="button" type="submit" value="確認" @click.prevent="validate"> -->
                 <input class="button" type="submit" value="確認" />
               </p>
             </fieldset>
@@ -165,6 +177,13 @@ export default {
         body: '',
         route: [],
       },
+      errors: {
+        name: [],
+        gender: [],
+        mail: [],
+        type: [],
+        body: [],
+      },
     }
   },
   created() {
@@ -182,6 +201,51 @@ export default {
       this.$store.dispatch(`addAction`, this.contact)
       // 確認画面に遷移
       this.$router.push('/contact/confirm/')
+    },
+    validate: function () {
+      var errors = {
+        name: [],
+        gender: [],
+        mail: [],
+        type: [],
+        body: [],
+        route: [],
+      }
+      if (!this.contact.name) {
+        errors.name.push('必須項目が入力されていません')
+      } else if (this.contact.name.length > 20) {
+        errors.name.push('20文字以内で入力してください。')
+      }
+      if (!this.contact.gender) {
+        errors.gender.push('必須項目が入力されていません')
+      }
+      if (!this.contact.mail) {
+        errors.mail.push('必須項目が入力されていません')
+      } else if (!this.checkString(this.contact.mail)) {
+        errors.mail.push('メールアドレス形式で入力してください')
+      }
+      if (!this.contact.type) {
+        errors.type.push('必須項目が入力されていません')
+      }
+      if (!this.contact.body) {
+        errors.body.push('必須項目が入力されていません')
+      } else if (this.contact.body.length > 100) {
+        errors.body.push('100文字以内で入力してください。')
+      }
+      if (
+        errors.name.length == 0 &&
+        errors.gender.length == 0 &&
+        errors.mail.length == 0 &&
+        errors.type.length == 0 &&
+        errors.body.length == 0
+      ) {
+        this.submit()
+      }
+      this.errors = errors
+    },
+    checkString(mail) {
+      var regex = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
+      return regex.test(mail)
     },
   },
 }
