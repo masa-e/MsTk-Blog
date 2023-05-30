@@ -13,7 +13,14 @@
 </template>
 
 <script lang="ts">
-export default {}
+export default {
+  created() {
+    const getContactData = this.$store.getters['getContact']
+    if (!getContactData.flag) {
+      this.$router.push('/contact/')
+    }
+  },
+}
 definePageMeta({
   layout: 'index',
 })

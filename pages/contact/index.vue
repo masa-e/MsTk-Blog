@@ -14,8 +14,8 @@
                   id="name"
                   v-model="contact.name"
                 />
-                <div class="errors" v-if="errors">
-                  {{ errors.name }}
+                <div class="errors">
+                  {{ errors.name[0] }}
                 </div>
               </div>
               <div class="form-group">
@@ -40,8 +40,8 @@
                   />
                   女性
                 </label>
-                <div class="errors" v-if="errors">
-                  {{ errors.gender }}
+                <div class="errors">
+                  {{ errors.gender[0] }}
                 </div>
               </div>
               <div class="form-group">
@@ -54,8 +54,8 @@
                   id="mail"
                   v-model="contact.mail"
                 />
-                <div class="errors" v-if="errors">
-                  {{ errors.mail }}
+                <div class="errors">
+                  {{ errors.mail[0] }}
                 </div>
               </div>
               <div class="form-group">
@@ -68,8 +68,8 @@
                   <option value="求人について">求人について</option>
                   <option value="その他">その他</option>
                 </select>
-                <div class="errors" v-if="errors">
-                  {{ errors.type }}
+                <div class="errors">
+                  {{ errors.type[0] }}
                 </div>
               </div>
               <div class="form-group">
@@ -81,8 +81,8 @@
                   id="body"
                   v-model="contact.body"
                 ></textarea>
-                <div class="errors" v-if="errors">
-                  {{ errors.body }}
+                <div class="errors">
+                  {{ errors.body[0] }}
                 </div>
               </div>
               <div class="form-group">
