@@ -19,11 +19,6 @@
   </div>
 </template>
 
-<script>
-export default {
-  components: {},
-}
-</script>
 <style lang="scss" scoped>
 nav {
   color: rgb(0, 0, 0);

@@ -3,18 +3,9 @@
     <div class="siteheader__sitetitle font-light text-4xl">
       <a href="/">{{ $config.SITE_TITLE }}</a>
     </div>
-    <Navigation />
+    <layoutsHeaderNavigation />
   </header>
 </template>
-
-<script>
-import Navigation from '~/components/layouts/Header/Navigation/index.vue'
-export default {
-  components: {
-    Navigation,
-  },
-}
-</script>
 
 <style scoped lang="scss">
 .siteheader {
