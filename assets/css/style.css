@@ -3,13 +3,13 @@
 * {
   box-sizing: border-box;
 }
-body {
+/* body {
   background: #83bafa;
   padding: 40px 0;
   color: #555;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
-}
+} */
 .main {
 }
 
@@ -112,10 +112,112 @@ select {
   margin: 0 0 30px;
 }
 
-.boxContainer {
+/* .boxContainer { */
   /* 横並びにする */
-  display: flex;
+  /* display: flex; */
   /* コンテナ内全体の交差軸方向（初期値では縦方向）と主軸方向（初期値では横方向）の揃え位置をまとめて指定 */
+  /* justify-content: space-around; */
+  /* width: 1160px; */
+/* } */
+
+/* Asideエリア */
+.styles_profile {
+  margin-top: 45px;
+}
+
+/* プロフィールエリア */
+.profile-img {
+  width:100px;
+  height:100px;
+  border-radius:50%;
+}
+.styles_sns {
+  display: flex;
+  margin: 20px auto 30px;
+  width: 100px;
+}
+.styles_sns__icon {
+  cursor: pointer;
+  margin-right: 16px;
+}
+.styles_field {
+  width: 100%;
+  box-sizing: border-box;
+  border:1px solid #c8c8c8
+}
+.styles_container {
+  padding: 20px 42px;
+}
+.styles_image {
+  margin-top: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 80px;
+}
+.styles_profile_detail {
+  margin-right: auto;
+  margin-left: auto;
+  width: 150px;
+  letter-spacing: .1em;
+  color: #423a57;
+}
+.styles_profile__name {
+  text-align: center;
+  margin-bottom: 4px;
+  font-size: .875rem;
+  font-weight: 700;
+  line-height: 18px;
+}
+.styles_profile__eng_name, .styles_profile__position {
+  text-align: center;
+  font-size: .75rem;
+}
+.styles_button {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 10px;
+  background: #f0eeee;
+  padding: 8px 16px;
+  border: 2px solid #423a57;
+  border-radius: 5px;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+}
+
+/* 全体のレイアウト */
+.styles_divider {
+  display: flex;
   justify-content: space-around;
+  margin: 40px auto 20px;
   width: 1160px;
+  min-height: 600px;
+}
+.styles_article {
+  width: 820px;
+  padding: 10px;
+}
+.styles_aside {
+  width: 300px;
+}
+
+/* 検索エリア */
+.styles_search {
+  width: 100%;
+}
+.styles_container {
+  position: relative;
+}
+.styles_input {
+  display: block;
+  width: 100%;
+  height: 30px;
+  color: #423a57;
+  border: 1px solid #423a57;
+  border-radius: 1px;
+  box-sizing: border-box;
+  padding: 4px 8px;
+  font-size: .875rem;
+  background: #fff;
 }

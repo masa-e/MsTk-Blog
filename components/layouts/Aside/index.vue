@@ -1,5 +1,10 @@
 <template>
-  <div class="p-3 mb-6">
-    <layoutsAsideSearchArea />
+  <div class="styles_search">
+    <div class="styles_container">
+      <layoutsAsideSearchArea />
+    </div>
+  </div>
+  <div class="styles_profile">
+    <layoutsAsideProfileArea />
   </div>
 </template>

@@ -6,10 +6,10 @@
           <nuxt-link to="/">ホーム</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/link02">このブログについて</nuxt-link>
+          <nuxt-link to="/link02">プロフィール</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/link03">プロフィール</nuxt-link>
+          <nuxt-link to="/inquiry">お問い合わせ（開発中）</nuxt-link>
         </li>
         <li>
           <nuxt-link to="/contact">お問い合わせ</nuxt-link>
