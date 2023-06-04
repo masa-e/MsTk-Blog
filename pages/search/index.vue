@@ -14,7 +14,9 @@ const queries: MicroCMSQueries = {
 }
 console.log(queries)
 
-const { data: postList_data } = await useFetch('/api/postList', { params: queries })
+const { data: postList_data } = await useFetch('/api/postList', {
+  params: queries,
+})
 
 // const { posts } = await useMicroCMSGetList<Blog>({
 //   endpoint: 'blogs',
@@ -29,7 +31,7 @@ watch(
 
 <template>
   <div class="wrapper">
-    <SearchForm :keyword="query" />
+    <layoutsAsideSearchArea :keyword="query" />
     <div class="results">
       <div v-if="postList_data.contents">
         <Article :data="postList_data" />

@@ -1,5 +1,5 @@
 <template>
-  <Article  :data="data" />
+  <Article :data="data" />
 </template>
 
 <script setup lang="ts">

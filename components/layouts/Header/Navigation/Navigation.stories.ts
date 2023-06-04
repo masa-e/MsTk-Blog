@@ -1,15 +1,15 @@
-import { Story } from "@storybook/vue3";
-import Navigation from "./index.vue";
+import { Story } from '@storybook/vue3'
+import Navigation from './index.vue'
 
 export default {
-  title: "components/Navigation",
+  title: 'components/Navigation',
   component: Navigation,
 }
 
 const Template: Story<typeof Navigation> = () => ({
   components: { Navigation },
-  template: "<Navigation />",
-});
+  template: '<Navigation />',
+})
 
-export const Default = Template.bind({});
-Default.storyName = "Increment Navigation Button";
+export const Default = Template.bind({})
+Default.storyName = 'Increment Navigation Button'
