@@ -20,8 +20,12 @@ export default defineNuxtConfig({
       TEAM_NAME: 'Mstk',
     },
   },
-  css: ['@/assets/css/style.css', "vuetify/styles", "@mdi/font/css/materialdesignicons.css"],
+  css: [
+    '@/assets/css/style.css',
+    'vuetify/styles',
+    '@mdi/font/css/materialdesignicons.css',
+  ],
   build: {
-    transpile: ["vuetify"],
+    transpile: ['vuetify'],
   },
 })
