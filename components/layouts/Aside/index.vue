@@ -4,6 +4,7 @@
       <layoutsAsideSearchArea />
     </div>
   </div>
+  <SearchForm />
   <div class="styles_profile">
     <layoutsAsideProfileArea />
   </div>
