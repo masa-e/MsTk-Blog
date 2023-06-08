@@ -222,3 +222,22 @@ select {
   font-size: 0.875rem;
   background: #fff;
 }
+
+/* カテゴリエリア */
+.pageTitle {
+  font-size: 20px;
+  font-weight: 600;
+  background-color: #eee;
+  padding: 6px 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.list {
+  border-bottom: 1px solid #eee;
+}
+
+.list a {
+  display: block;
+  padding: 10px;
+}
