@@ -70,8 +70,22 @@ export default {
   },
   methods: {
     submit() {
-      // 送信後、storeに保存していたデータを破棄
-      this.$store.dispatch('removeAction')
+      const msgBody = {
+        name: this.contact.name,
+        gender: this.contact.gender,
+        mail: this.contact.mail,
+        types: this.contact.type,
+        body: this.contact.body,
+      }
+
+      useFetch('/api/v1/contacts/', {
+        method: 'POST',
+        body: JSON.stringify(msgBody),
+        headers: {
+          'Content-type': 'application/json; charset=utf-8',
+        },
+      })
+
       // 確認画面に遷移
       this.$router.push('/contact/complete/')
     },

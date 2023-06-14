@@ -28,4 +28,14 @@ export default defineNuxtConfig({
   build: {
     transpile: ['vuetify'],
   },
+  vite: {
+    server: {
+      proxy: {
+        '/api/': {
+          target: process.env.PROXY_API_URL,
+          secure: false,
+        },
+      },
+    },
+  },
 })

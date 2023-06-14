@@ -7,4 +7,7 @@
   <div class="styles_profile">
     <layoutsAsideProfileArea />
   </div>
+  <div class="styles_profile">
+    <layoutsAsideCategoryArea />
+  </div>
 </template>
