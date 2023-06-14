@@ -1,8 +1,6 @@
 <template>
   <Article :data="data" />
-  <div v-if="data.totalCount === 0">
-    ブログコンテンツがありません
-  </div>
+  <div v-if="data.totalCount === 0">ブログコンテンツがありません</div>
 </template>
 
 <script setup lang="ts">
@@ -22,5 +20,4 @@ const { params } = useRoute()
 const { data: data } = await useFetch('/api/categoryFilter', {
   params: params,
 })
-
 </script>

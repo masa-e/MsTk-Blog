@@ -76,14 +76,14 @@ export default {
         mail: this.contact.mail,
         types: this.contact.type,
         body: this.contact.body,
-      };
+      }
 
       useFetch('/api/v1/contacts/', {
         method: 'POST',
         body: JSON.stringify(msgBody),
         headers: {
           'Content-type': 'application/json; charset=utf-8',
-        }
+        },
       })
 
       // 確認画面に遷移

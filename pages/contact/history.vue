@@ -39,15 +39,15 @@
 export default {
   data() {
     return {
-      data: null
+      data: null,
     }
   },
   created() {
     const response = useFetch('/api/v1/contacts/', {
-        method: 'GET',
-        headers: {
-          'Content-type': 'application/json; charset=utf-8',
-        }
+      method: 'GET',
+      headers: {
+        'Content-type': 'application/json; charset=utf-8',
+      },
     })
     this.data = response.data
   },

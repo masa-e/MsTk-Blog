@@ -26,7 +26,12 @@ function submit() {
 
 <template>
   <form class="search-form" @submit.prevent="submit">
-    <input type="text" v-model="query" ref="layoutsAsideSearchArea" placeholder="Keyword" />
+    <input
+      type="text"
+      v-model="query"
+      ref="layoutsAsideSearchArea"
+      placeholder="Keyword"
+    />
   </form>
 </template>
 
