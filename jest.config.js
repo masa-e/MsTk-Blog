@@ -7,5 +7,9 @@ module.exports = {
     '^@/(.*)$': '<rootDir>/$1',
     '^~/(.*)$': '<rootDir>/$1'
   },
-  moduleFileExtensions: ['js', 'json', 'vue']
+  moduleFileExtensions: ['js', 'json', 'vue'],
+  testEnvironment: 'jest-environment-jsdom',
+  testEnvironmentOptions: {
+    "customExportConditions": ["node", "node-addons"]
+  }
 }
