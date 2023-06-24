@@ -1,42 +1,52 @@
-# Nuxt 3 Minimal Starter
+# MsTk Blog
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## 機能
 
-## Setup
+- ブログ一覧
+- カテゴリー別記事一覧
+- 記事検索
+- 記事詳細
 
-Make sure to install the dependencies:
+## 技術構成
 
-```bash
-# yarn
-yarn install
+- Nuxt.js
+- microCMS(コンテンツ)
+- TypeScript
+- ESLint
+- Prettier
+- Storybook
+- Jest
 
-# npm
-npm install
+## 環境変数
 
-# pnpm
-pnpm install
+プロジェクトルートに.env ファイルを作成し、以下の項目を設定してください。
+
+- MICROCMS_SERVICE_DOMAIN (microCMS の サービスドメイン)
+- MICROCMS_API_KEY (microCMS の APIキー)
+- PROXY_API_URL (backend の API URL)
+
+例:
+
+```
+MICROCMS_SERVICE_DOMAIN=xxxxxxxx
+MICROCMS_API_KEY=xxxxxxxx
+PROXY_API_URL="http://localhost:3009"
+
 ```
 
-## Development Server
+## 開発方法
 
-Start the development server on `http://localhost:3000`
-
-```bash
-npm run dev
 ```
+# パッケージをinstall
+$ yarn
 
-## Production
+# 開発サーバーを起動(localhost:3000)
+$ yarn dev
 
-Build the application for production:
+# storybookを起動
+$ yarn storybook
 
-```bash
-npm run build
+# 単体テストを実行
+$ yarn run test
+
 ```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
