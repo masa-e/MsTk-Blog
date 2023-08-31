@@ -47,6 +47,8 @@
     "@babel/runtime": "^7.22.5",
     "@mdi/font": "^7.2.96",
     "@nuxtjs/composition-api": "^0.33.1",
+    "@types/jest": "^29.5.2",
+    "@types/mocha": "^10.0.1",
     "@vue/composition-api": "^1.7.1",
     "@vue/test-utils": "^2.3.2",
     "axios": "^1.4.0",
