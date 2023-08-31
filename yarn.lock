@@ -3303,6 +3303,18 @@
     hookable "^5.5.3"
     unhead "1.1.26"
 
+"@vee-validate/i18n@^4.11.3":
+  version "4.11.3"
+  resolved "https://registry.yarnpkg.com/@vee-validate/i18n/-/i18n-4.11.3.tgz#c8d657e2a0f364ef294fed33bc6f945527801cdb"
+  integrity sha512-9KWyplhcwLVTw1MDnrHFe92xnmGwY93h5dG2Fa8n+zb9brfyzD5j366B+WWMJK86yBEKrStZomBohTLLdnVlxg==
+
+"@vee-validate/rules@^4.11.3":
+  version "4.11.3"
+  resolved "https://registry.yarnpkg.com/@vee-validate/rules/-/rules-4.11.3.tgz#d6a8d385f9e10bef605426193cb447fa7dfb6c4e"
+  integrity sha512-MJmQgTXnt0lEOLfF2z+IE1dViu8dISaLa95axjd/rfjGYLQE9kI/eGQOZ0bojuYIVB7cD+K3xkRNdCPg9Bi7fg==
+  dependencies:
+    vee-validate "4.11.3"
+
 "@vercel/nft@^0.22.6":
   version "0.22.6"
   resolved "https://registry.npmjs.org/@vercel/nft/-/nft-0.22.6.tgz"
@@ -9818,6 +9830,11 @@ type-fest@^0.8.1:
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.8.1.tgz#09e249ebde851d3b1e48d27c105444667f17b83d"
   integrity sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==
 
+type-fest@^4.2.0:
+  version "4.3.1"
+  resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-4.3.1.tgz#5cb58cdab5120f7ab0b40cfdc35073fb9adb651d"
+  integrity sha512-pphNW/msgOUSkJbH58x8sqpq8uQj6b0ZKGxEsLKMUnGorRcDjrUaLS+39+/ub41JNTwrrMyJcUB8+YZs3mbwqw==
+
 type-is@^1.6.16, type-is@~1.6.18:
   version "1.6.18"
   resolved "https://registry.npmjs.org/type-is/-/type-is-1.6.18.tgz"
@@ -10103,6 +10120,14 @@ vary@^1.1.2, vary@~1.1.2:
   version "1.1.2"
   resolved "https://registry.npmjs.org/vary/-/vary-1.1.2.tgz"
   integrity sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==
+
+vee-validate@4.11.3, vee-validate@^4.11.3:
+  version "4.11.3"
+  resolved "https://registry.yarnpkg.com/vee-validate/-/vee-validate-4.11.3.tgz#b95cff30c46bf49102ef49141fd77d36b96edf7f"
+  integrity sha512-YhWORdZRE1GL6vXKj3r9f+Y8fJH5JMwMUJ4DFS44+WcTtiNXggyE3pyJPlZBqS9AgYGZ47EOv4UczkLxHqufiw==
+  dependencies:
+    "@vue/devtools-api" "^6.5.0"
+    type-fest "^4.2.0"
 
 vite-node@^0.30.1:
   version "0.30.1"

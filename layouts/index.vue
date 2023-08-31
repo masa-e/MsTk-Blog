@@ -17,15 +17,32 @@
   </div>
 </template>
 
-<script>
-import Header from '~/components/layouts/Header'
-import Footer from '~/components/layouts/Footer'
-import Aside from '~/components/layouts/Aside'
-export default {
+<script lang="ts">
+import { defineComponent } from "vue";
+import Header from '~/components/layouts/Header';
+import Footer from '~/components/layouts/Footer';
+import Aside from '~/components/layouts/Aside';
+import { defineRule, configure } from 'vee-validate'
+import {required} from '@vee-validate/rules'
+import { localize } from '@vee-validate/i18n'
+import ja from '@vee-validate/i18n/dist/locale/ja.json'
+
+export default defineComponent({
   components: {
     Header,
     Footer,
-    Aside,
-  },
-}
+    Aside
+  }
+});
+
+configure({
+  generateMessage: localize({
+    ja
+  })
+});
+
+localize('ja');
+
+defineRule('required', required); 
+
 </script>

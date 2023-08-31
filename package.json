@@ -43,10 +43,13 @@
   "dependencies": {
     "@mdi/font": "^7.2.96",
     "@nuxtjs/composition-api": "^0.33.1",
+    "@vee-validate/i18n": "^4.11.3",
+    "@vee-validate/rules": "^4.11.3",
     "@vue/composition-api": "^1.7.1",
     "axios": "^1.4.0",
     "dayjs": "^1.11.7",
     "nuxt-microcms-module": "^3.0.1",
+    "vee-validate": "^4.11.3",
     "vuetify": "^3.3.2",
     "vuex": "^4.0.2"
   }
