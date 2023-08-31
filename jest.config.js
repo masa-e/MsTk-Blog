@@ -11,5 +11,12 @@ module.exports = {
   testEnvironment: 'jest-environment-jsdom',
   testEnvironmentOptions: {
     "customExportConditions": ["node", "node-addons"]
-  }
+  },
+  preset: 'ts-jest/presets/default-esm',
+  globals: {
+    'ts-jest': {
+      tsConfig: 'tsconfig.json',
+      useESM: true,
+    },
+  },
 }
