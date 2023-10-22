@@ -37,7 +37,4 @@ type Props = {
 
 const { data } = defineProps<Props>()
 
-definePageMeta({
-  layout: 'index',
-})
 </script>
