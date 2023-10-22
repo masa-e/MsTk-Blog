@@ -5,7 +5,7 @@
       <div class="styles_image">
         <v-avatar size="100" class="mb-3 avatar" @click="onClickImage">
           <img
-            src="@/assets/desert.jpg"
+            src="@/assets/icon.jpg"
             alt="avatarImage"
             class="avatar-image profile-img"
           />
