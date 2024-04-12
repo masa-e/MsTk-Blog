@@ -9,10 +9,10 @@
           <nuxt-link to="/">プロフィール</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/contact/history">お問い合わせ（開発中）</nuxt-link>
+          <nuxt-link to="/contact">お問い合わせ</nuxt-link>
         </li>
         <li>
-          <nuxt-link to="/contact">お問い合わせ</nuxt-link>
+          <nuxt-link to="/contact/history">お問い合わせ履歴</nuxt-link>
         </li>
       </ul>
     </nav>

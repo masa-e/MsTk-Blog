@@ -16,7 +16,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       compression: true,
-      SITE_TITLE: 'MsTk Blog',
+      SITE_TITLE: 'Evolution Blog',
       TEAM_NAME: 'Mstk',
     },
   },

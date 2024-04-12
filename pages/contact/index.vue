@@ -133,10 +133,6 @@
 </template>
 
 <style>
-form {
-  width: 50%;
-  margin: 0 auto;
-}
 .form-row {
   display: flex;
   margin-top: 2px;
