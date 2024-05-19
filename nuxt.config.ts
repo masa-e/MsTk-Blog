@@ -30,6 +30,7 @@ export default defineNuxtConfig({
   },
   vite: {
     server: {
+      // バックエンドのサーバーに接続
       proxy: {
         '/api/': {
           target: process.env.PROXY_API_URL,

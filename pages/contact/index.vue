@@ -159,6 +159,10 @@
   margin: 10px 0 0;
   font-size: 12px;
 }
+
+select, textarea {
+  border: #eee 0.5px inset;
+}
 </style>
 
 <script lang="ts">
