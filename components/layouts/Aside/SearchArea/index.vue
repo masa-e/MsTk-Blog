@@ -26,11 +26,12 @@ function submit() {
 
 <template>
   <form class="search-form" @submit.prevent="submit">
+    記事検索：
     <input
       type="text"
       v-model="query"
       ref="layoutsAsideSearchArea"
-      placeholder="Keyword"
+      placeholder="検索"
     />
   </form>
 </template>
@@ -45,7 +46,7 @@ input[type='text'] {
   background-color: #fff;
   font-family: 'Ubuntu', 'Noto Sans JP', sans-serif;
   display: inline-block;
-  width: 100%;
+  width: 200px;
   height: 28px;
 }
 

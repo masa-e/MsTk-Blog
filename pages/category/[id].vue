@@ -1,6 +1,8 @@
 <template>
-  <Article :data="data" />
-  <div v-if="data.totalCount === 0">ブログコンテンツがありません</div>
+  <div v-if="data">
+    <Article :data="data" />
+    <div v-if="data.totalCount === 0">ブログコンテンツがありません</div>
+  </div>
 </template>
 
 <script setup lang="ts">

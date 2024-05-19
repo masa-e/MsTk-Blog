@@ -31,7 +31,6 @@
 MICROCMS_SERVICE_DOMAIN=xxxxxxxx
 MICROCMS_API_KEY=xxxxxxxx
 PROXY_API_URL="http://localhost:3009"
-
 ```
 
 ## 開発方法
@@ -48,5 +47,20 @@ $ yarn storybook
 
 # 単体テストを実行
 $ yarn run test
+```
+
+## エラー時解決法
+
+storybookがうまく起動しない時は、キャッシュの問題でないか確認
 
 ```
+Error: Failed to read cache value at:
+```
+
+などとログに出力されている場合は、
+
+```
+$ rm -rf node_modules/.cache/storybook
+```
+
+でキャッシュを削除すると、正常にstorybookが起動する。

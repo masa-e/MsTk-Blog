@@ -133,10 +133,6 @@
 </template>
 
 <style>
-form {
-  width: 50%;
-  margin: 0 auto;
-}
 .form-row {
   display: flex;
   margin-top: 2px;
@@ -162,6 +158,10 @@ form {
   color: red;
   margin: 10px 0 0;
   font-size: 12px;
+}
+
+select, textarea {
+  border: #eee 0.5px inset;
 }
 </style>
 
